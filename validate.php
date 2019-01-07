@@ -12,7 +12,6 @@ $isValid = true;
 $name = $_POST['fullName'];
 if (empty($name)) {
     echo "Please enter your full name";
-} else {
     $isValid = false;
 }
 
@@ -33,7 +32,7 @@ if (!isset($_POST['cupcakes'])) {
 }
 
 // if valid
-//if ($isValid) {
+if ($isValid) {
     $price = 0;
 
     echo "<p>Thank you $name for your order!</p>";
@@ -44,4 +43,4 @@ if (!isset($_POST['cupcakes'])) {
     }
     echo "</ul>";
     echo "Total: $" . number_format(sizeOf($_POST['cupcakes']) * 3.50, 2);
-//}
+}
