@@ -5,10 +5,6 @@
  * 328/cupcakes/index.php
  * Cupcake Fundraiser
  */
-
-// error reporting
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
 ?>
 <!doctype html>
 <html lang="en">
@@ -38,7 +34,7 @@ error_reporting(E_ALL);
 ?>
     <form id="cupcake" method="post" action="">
         <fieldset>
-            <legend>Full Name</legend>
+            <legend>Name</legend>
             <label>
                 <input type="text" name="fullName" id="fullName" value="<?php echo $name?>">
             </label>
