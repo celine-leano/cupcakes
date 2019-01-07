@@ -48,6 +48,9 @@
                     // loop through the array to display options
                     foreach ($cupcakes as $option => $text) {
                         echo "<label><input type='checkbox' value='" . $option . "' name='cupcakes[]'";
+                        if (in_array($option, $_POST['cupcakes'])) {
+                            echo " checked='checked'";
+                        }
                         echo "> " . $text . "</label><br>";
                     }
                 ?>
