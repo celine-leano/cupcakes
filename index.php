@@ -30,7 +30,6 @@
         </fieldset>
         <fieldset>
             <legend>Type of Cupcake(s)</legend>
-            <label>
                 <?php
                     // create an associative array
                     $cupcakes = array("grasshopper" => "The Grasshopper", "maple" => "Whiskey Maple Bacon",
@@ -39,10 +38,12 @@
 
                     // loop through the array to display options
                     foreach ($cupcakes as $option => $text) {
-                        echo "<input type='checkbox' value='" . $option . "' name='cupcakes[]'> " . $text . "<br>";
+                        echo "<label><input type='checkbox' value='" . $option . "' name='cupcakes[]'> " . $text . "</label><br>";
                     }
                 ?>
-            </label><br>
+            <span class="err" id="err-cupcake">
+                Please choose at least cupcake type
+            </span>
         </fieldset>
         <input type="submit" value="Order" id="submit">
     </form>

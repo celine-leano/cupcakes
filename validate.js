@@ -24,5 +24,21 @@ function validate() {
         isValid = false;
     }
 
+    // Check for at least one cupcake
+    var cupcakes = document.getElementsByName("cupcakes[]");
+    var checked = 0;
+
+    for (i = 0; i < cupcakes.length; i++) {
+        if (cupcakes[i].checked) {
+            checked++;
+        }
+    }
+
+    if (checked < 1) {
+        var errCupcake = document.getElementById("err-cupcake");
+        errCupcake.style.visibility = "visible";
+        isValid = false;
+    }
+
     return isValid;
 }
