@@ -34,3 +34,4 @@ foreach ($cupcakesPicked as $cupcake) {
     echo "<li>$cupcake</li>";
 }
 echo "</ul>";
+echo "Total: $" . number_format(sizeOf($cupcakesPicked) * 3.50, 2);
