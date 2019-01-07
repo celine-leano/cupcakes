@@ -14,14 +14,19 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cupcake Fundraiser</title>
+
+    <link rel="stylesheet" type="text/css" href="cupcake.css">
 </head>
 <body>
     <form id="cupcake" method="post" action="#">
         <fieldset>
-            <legend>Name</legend>
+            <legend>Full Name</legend>
             <label>
-                <input type="text" name="name" id="name">
+                <input type="text" name="fullName" id="fullName">
             </label>
+            <span class="err" id="err-name">
+                Please enter your name
+            </span>
         </fieldset>
         <fieldset>
             <legend>Type of Cupcake(s)</legend>
@@ -42,4 +47,5 @@
         <input type="submit" value="Order" id="submit">
     </form>
 </body>
+<script src="validate.js"></script>
 </html>

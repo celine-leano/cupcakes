@@ -1,0 +1,11 @@
+/*
+Celine Leano
+1/6/2018
+328/cupcakes/cupcake.css
+Styling for cupcake form
+ */
+
+.err {
+    color: red;
+    visibility: hidden;
+}
