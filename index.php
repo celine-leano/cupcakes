@@ -25,7 +25,6 @@ error_reporting(E_ALL);
 <?php
     // define variables
     $name = "";
-    $chosenCupcakes = array();
 
     // create an associative array
     $cupcakes = array("grasshopper" => "The Grasshopper", "maple" => "Whiskey Maple Bacon",
@@ -37,7 +36,7 @@ error_reporting(E_ALL);
         require 'validate.php';
     }
 ?>
-    <form id="cupcake" method="post" action="#">
+    <form id="cupcake" method="post" action="">
         <fieldset>
             <legend>Full Name</legend>
             <label>
@@ -62,6 +61,6 @@ error_reporting(E_ALL);
         </fieldset>
         <input type="submit" value="Order" id="submit">
     </form>
-<!--<script src="validate.js"></script>-->
+<script src="validate.js"></script>
 </body>
 </html>

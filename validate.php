@@ -20,4 +20,17 @@ if (empty($name)) {
 if (!isset($_POST['cupcakes'])) {
     echo "Please select at least one cupcake";
     $isValid = false;
+} else {
+    $cupcakesPicked = $_POST['cupcakes'];
 }
+
+// if valid
+$price = 0;
+
+echo "<p>Thank you $name for your order!</p>";
+echo "Order Summary:<br>";
+echo "<ul>";
+foreach ($cupcakesPicked as $cupcake) {
+    echo "<li>$cupcake</li>";
+}
+echo "</ul>";
