@@ -21,7 +21,7 @@ if (!isset($_POST['cupcakes'])) {
     echo "Please select at least one cupcake";
     $isValid = false;
 } else {
-    $cupcakesPicked = $_POST['cupcakes'];
+    $chosen = $_POST['cupcakes'];
 }
 
 // if valid
@@ -30,8 +30,8 @@ $price = 0;
 echo "<p>Thank you $name for your order!</p>";
 echo "Order Summary:<br>";
 echo "<ul>";
-foreach ($cupcakesPicked as $cupcake) {
-    echo "<li>$cupcake</li>";
+foreach ($chosen as $key) {
+    echo "<li>$cupcakes[$key]</li>";
 }
 echo "</ul>";
-echo "Total: $" . number_format(sizeOf($cupcakesPicked) * 3.50, 2);
+echo "Total: $" . number_format(sizeOf($_POST['cupcakes']) * 3.50, 2);
